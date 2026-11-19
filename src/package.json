@@ -1,0 +1,9 @@
+{
+  "name": "ache-corp",
+  "private": true,
+  "scripts": {
+    "dev": "tailwindcss -i input.css -o style.css --watch",
+    "build": "tailwindcss -i input.css -o style.css --minify"
+  },
+  "devDependencies": { "@tailwindcss/cli": "^4.0.0", "tailwindcss": "^4.0.0" }
+}

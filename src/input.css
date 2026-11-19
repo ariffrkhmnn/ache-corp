@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* ===== Ache Corp — Tailwind v4 ===== */
+@theme {
+  --color-bg: #ecece8;
+  --color-paper: #f7f7f4;
+  --color-line: #cfcfc8;
+  --color-muted: #5d5d58;
+  --color-accent: #ff3b1f;
+  --font-display: "Anton", "Impact", sans-serif;
+  --font-body: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease-ache: cubic-bezier(.2, .7, .2, 1);
+  --breakpoint-xs: 600px;
+  --breakpoint-nav: 900px;
+  --breakpoint-wide: 1100px;
+  --animate-slide: slide 28s linear infinite;
+  --animate-rise: rise .8s var(--ease-ache) both;
+  --animate-fade: fade .4s var(--ease-ache) both;
+  --animate-bump: bump .35s var(--ease-ache);
+  @keyframes slide { to { transform: translateX(-50%); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(28px); } }
+  @keyframes fade { from { opacity: 0; transform: translateY(12px); } }
+  @keyframes bump { 40% { transform: scale(1.5); } }
+  @keyframes fill { from { transform: scaleX(0); } }
+}
+
+/* class status yang di-toggle oleh JS: is-open, is-active, is-stuck, show */
+@custom-variant on (&:is(.is-open, .is-active, .is-stuck, .show));
+@custom-variant hov (@media (hover: hover));
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { @apply bg-bg font-body text-base leading-relaxed text-black antialiased; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; }
+  [hidden] { display: none !important; }
+  body.lock { overflow: hidden; }
+  .is-broken { visibility: hidden; }
+}
+
+@layer components {
+  .btn { @apply inline-block border-2 border-black bg-black px-7 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-accent hover:bg-accent disabled:opacity-50; }
+  .btn-light { @apply border-white bg-white text-black; }
+  .title { @apply font-display text-[clamp(40px,6vw,76px)] leading-none font-normal uppercase; }
+  .tlink { @apply border-b-2 border-current pb-px font-bold hover:text-accent; }
+  .tab { @apply border-[1.5px] border-black px-4 py-[7px] text-sm font-semibold transition hover:bg-black/10 on:bg-black on:text-white; }
+  .icon-btn { @apply relative grid size-11 place-items-center rounded-full transition hover:bg-black/10; }
+  .icon-btn.is-in::after { content: ""; @apply absolute top-[9px] right-[9px] size-[9px] rounded-full border-2 border-bg bg-[#1fbf5b]; }
+  .field { @apply grid gap-1.5 text-sm font-semibold; }
+  .field input { @apply border-[1.5px] border-black bg-white px-3.5 py-3 text-base font-normal focus:outline-3 focus:outline-accent; }
+
+  /* navigasi */
+  .nl { @apply block py-1 font-display text-[38px] leading-tight uppercase nav:py-2 nav:font-body nav:text-[15px] nav:leading-normal nav:font-semibold nav:normal-case; }
+  .nl-top { @apply relative nav:after:absolute nav:after:inset-x-0 nav:after:bottom-0.5 nav:after:h-0.5 nav:after:origin-left nav:after:scale-x-0 nav:after:bg-black nav:after:transition-transform nav:hover:after:scale-x-100; }
+  .sub { @apply pb-2 pl-3 duration-200 nav:invisible nav:absolute nav:top-full nav:-left-4 nav:min-w-[190px] nav:translate-y-1.5 nav:border nav:border-black nav:bg-paper nav:py-2 nav:pl-0 nav:opacity-0 nav:transition; }
+  .has-sub:hover .sub, .has-sub:focus-within .sub { @apply nav:visible nav:translate-y-0 nav:opacity-100; }
+  .sub a { @apply block py-[5px] text-base font-semibold hover:text-accent nav:px-4 nav:py-2 nav:hover:bg-black nav:hover:text-white; }
+
+  /* drawer (keranjang + akun) */
+  .drawer { @apply fixed inset-y-0 right-0 z-100 flex w-[min(420px,100%)] translate-x-full flex-col bg-paper transition-transform duration-[400ms] ease-ache on:translate-x-0; }
+  .d-head { @apply flex items-center justify-between border-b border-line px-[22px] py-[18px]; }
+  .d-title { @apply font-display text-[30px] font-normal uppercase; }
+
+  /* hero */
+  .slide { @apply invisible absolute inset-0 opacity-0 transition-[opacity,visibility] duration-[900ms] on:visible on:opacity-100; }
+  .slide::after { content: ""; @apply absolute inset-0 bg-linear-to-r from-black/65 to-black/5 to-70%; }
+  .slide > img { @apply size-full scale-[1.06] object-cover grayscale-[.25] contrast-105 transition-transform duration-[7000ms] ease-out; }
+  .slide.is-active > img { @apply scale-100; }
+  .slide .copy { @apply absolute right-[22px] bottom-[100px] left-[22px] z-2 max-w-[560px] text-white nav:right-auto nav:bottom-[90px] nav:left-14; }
+  .slide.is-active .copy > * { @apply animate-rise; }
+  .slide.is-active .copy > :nth-child(2) { animation-delay: .08s; }
+  .slide.is-active .copy > :nth-child(3) { animation-delay: .16s; }
+  .slide.is-active .copy > :nth-child(4) { animation-delay: .24s; }
+  .arrow { @apply size-[46px] border border-white/50 bg-white/15 text-xl text-white backdrop-blur-sm transition hover:bg-white hover:text-black; }
+  .dot { @apply relative h-1 w-[22px] overflow-hidden bg-white/40 nav:w-[34px]; }
+  .dot.is-active::after { content: ""; animation: fill var(--slide-ms, 6000ms) linear forwards; @apply absolute inset-0 origin-left bg-white; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

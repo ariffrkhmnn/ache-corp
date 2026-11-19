@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ache Corp — Streetwear dari Malang</title>
+  <meta name="description" content="Ache Corp: streetwear lokal. Outerwear, tees, headwear, dan aksesoris.">
+  <meta name="theme-color" content="#ecece8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip absolute top-0 -left-[999px] z-200 bg-black px-3.5 py-2.5 text-white focus:left-0" href="#main">Langsung ke konten</a>
+  <div class="overflow-hidden bg-black text-[13px] font-semibold text-white" aria-label="Promo"><div class="flex w-max animate-slide">
+    <span class="whitespace-nowrap px-10 py-[9px] after:ml-20 after:text-accent after:content-['/']">Diskon sampai 50%</span><span class="whitespace-nowrap px-10 py-[9px] after:ml-20 after:text-accent after:content-['/']">Gratis ongkir semua pesanan</span><span class="whitespace-nowrap px-10 py-[9px] after:ml-20 after:text-accent after:content-['/']">Drop baru tiap Jumat</span><span class="whitespace-nowrap px-10 py-[9px] after:ml-20 after:text-accent after:content-['/']">Diskon sampai 50%</span><span class="whitespace-nowrap px-10 py-[9px] after:ml-20 after:text-accent after:content-['/']">Gratis ongkir semua pesanan</span><span class="whitespace-nowrap px-10 py-[9px] after:ml-20 after:text-accent after:content-['/']">Drop baru tiap Jumat</span>
+  </div></div>
+  <header id="header" class="sticky top-0 z-60 grid h-17 grid-cols-[1fr_auto_1fr] items-center border-b border-transparent bg-bg px-3 transition nav:px-7 on:border-line on:bg-bg/90 on:backdrop-blur">
+    <button id="burger" class="icon-btn group flex-col gap-[5px] justify-self-start nav:hidden" aria-label="Buka menu" aria-expanded="false" aria-controls="nav">
+      <span class="block h-0.5 w-[22px] bg-black transition group-aria-expanded:translate-y-[7px] group-aria-expanded:rotate-45"></span>
+      <span class="block h-0.5 w-[22px] bg-black transition group-aria-expanded:opacity-0"></span>
+      <span class="block h-0.5 w-[22px] bg-black transition group-aria-expanded:-translate-y-[7px] group-aria-expanded:-rotate-45"></span>
+    </button>
+    <nav id="nav" class="fixed inset-x-0 top-26 bottom-0 z-55 -translate-x-full overflow-auto bg-bg p-6 transition-transform duration-300 ease-ache on:translate-x-0 nav:static nav:translate-x-0 nav:overflow-visible nav:bg-transparent nav:p-0" aria-label="Navigasi utama">
+      <ul class="flex flex-col gap-1 nav:flex-row nav:gap-7">
+        <li class="has-sub relative"><a class="nl nl-top" href="shop.html">Shop</a>
+          <ul class="sub"><li><a href="shop.html">Semua produk</a></li><li><a href="shop.html?cat=mens-shirts">Shirts</a></li><li><a href="shop.html?cat=mens-shoes">Sneakers</a></li><li><a href="shop.html?cat=sunglasses">Eyewear</a></li><li><a href="shop.html?cat=mens-watches">Watches</a></li><li><a href="shop.html?cat=womens-bags">Bags</a></li></ul></li>
+        <li><a class="nl nl-top" href="#koleksi">Collection</a></li>
+        <li><a class="nl nl-top" href="#campaign">Campaign</a></li>
+        <li><a class="nl nl-top" href="#stores">Stores</a></li>
+        <li><a class="nl nl-top text-accent" href="shop.html?cat=sale">Sale</a></li>
+      </ul>
+    </nav>
+    <a href="#top" class="font-display text-[26px] leading-none tracking-[.04em] xs:text-[30px]" aria-label="Ache Corp, ke beranda"><span class="text-accent">ACHE</span> CORP</a>
+    <div class="flex justify-end gap-1">
+      <button class="icon-btn" id="searchOpen" aria-label="Cari produk"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button class="icon-btn" id="authOpen" aria-label="Masuk atau daftar"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></button>
+      <button class="icon-btn" id="cartOpen" aria-label="Buka keranjang"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span id="cartCount" class="absolute top-1 right-0.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-accent px-[5px] text-[11px] font-bold text-white">0</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="relative h-[min(86vh,780px)] min-h-[480px] overflow-hidden bg-[#1b1b1b]" id="top" aria-roledescription="carousel" aria-label="Kampanye terbaru">
+      <div class="absolute inset-0">
+        <article class="slide is-active">
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1920&q=70" alt="Rak pakaian streetwear Ache Corp" fetchpriority="high">
+          <div class="copy"><p class="mb-[18px] inline-block bg-accent px-3 py-1 text-[13px] font-bold">Koleksi FW26</p><h1 class="mb-5 font-display text-[clamp(76px,12vw,190px)] leading-[.88] font-normal uppercase">Dead<br>Static</h1>
+            <p class="mb-[26px] max-w-[420px] text-[17px]">Outerwear berat, warna redup, dan siluet lebar untuk malam yang panjang.</p><a class="btn" href="shop.html">Belanja sekarang</a></div>
+        </article>
+        <article class="slide">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1920&q=70" alt="Model memakai jaket Ache Corp" loading="lazy">
+          <div class="copy"><p class="mb-[18px] inline-block bg-accent px-3 py-1 text-[13px] font-bold">Lookbook</p><h2 class="mb-5 font-display text-[clamp(76px,12vw,190px)] leading-[.88] font-normal uppercase">Soft<br>Hours</h2>
+            <p class="mb-[26px] max-w-[420px] text-[17px]">Katun tebal yang adem di Malang, tetap rapi dipakai seharian.</p><a class="btn" href="#campaign">Lihat lookbook</a></div>
+        </article>
+        <article class="slide">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1920&q=70" alt="Model memakai streetwear" loading="lazy">
+          <div class="copy"><p class="mb-[18px] inline-block bg-accent px-3 py-1 text-[13px] font-bold">Kolaborasi</p><h2 class="mb-5 font-display text-[clamp(76px,12vw,190px)] leading-[.88] font-normal uppercase">Night<br>Shift</h2>
+            <p class="mb-[26px] max-w-[420px] text-[17px]">Seri kolaborasi bersama seniman lokal. Stok terbatas.</p><a class="btn" href="#koleksi">Lihat koleksi</a></div>
+        </article>
+      </div>
+      <div class="absolute right-5 bottom-6 z-3 flex items-center gap-3.5 nav:right-10 nav:bottom-9">
+        <button class="arrow" id="prevSlide" aria-label="Slide sebelumnya">&#8592;</button>
+        <div class="flex gap-2" id="dots" role="tablist" aria-label="Pilih slide"></div>
+        <button class="arrow" id="nextSlide" aria-label="Slide berikutnya">&#8594;</button>
+      </div>
+    </section>
+
+    <div class="overflow-hidden border-y-2 border-black bg-accent text-white" aria-hidden="true"><div class="flex w-max animate-[slide_30s_linear_infinite] font-display text-[28px] tracking-[.05em] [&>span]:px-9 [&>span]:py-2.5 [&>span]:whitespace-nowrap [&>span:nth-child(even)]:text-black">
+      <span>ACHE CORP</span><span>DIBUAT DI INDONESIA</span><span>ACHE CORP</span><span>BUKAN UNTUK SEMUA ORANG</span><span>ACHE CORP</span><span>DIBUAT DI INDONESIA</span><span>ACHE CORP</span><span>BUKAN UNTUK SEMUA ORANG</span>
+    </div></div>
+
+    <!-- BEST SELLERS: carousel kategori, klik -> halaman Shop -->
+    <section class="mt-[84px] bg-black py-14 text-white" id="produk" aria-label="Best sellers">
+      <div class="mx-auto max-w-[1480px] px-4 nav:px-7">
+        <div class="mb-7 flex items-end justify-between gap-5">
+          <div><p class="mb-2 text-xs font-bold tracking-[.16em] text-accent uppercase">Ache Corp</p><h2 class="title">Best sellers</h2>
+            <p class="mt-2.5 text-[15px] text-[#c9c9c4] nav:text-[17px]">Pilihan paling laris. Pilih kategori, langsung belanja.</p></div>
+          <div class="flex shrink-0 overflow-hidden rounded-sm bg-paper text-xl text-black">
+            <button id="favPrev" class="h-[50px] w-12 transition enabled:hover:bg-accent enabled:hover:text-white disabled:opacity-30" aria-label="Kategori sebelumnya">&#8249;</button>
+            <button id="favNext" class="h-[50px] w-12 border-l border-line transition enabled:hover:bg-accent enabled:hover:text-white disabled:opacity-30" aria-label="Kategori berikutnya">&#8250;</button></div>
+        </div>
+        <div id="favTrack" class="flex snap-x snap-mandatory gap-[22px] overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"></div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-[1480px] px-4 pt-[60px] nav:px-7 nav:pt-[84px]" id="koleksi">
+      <h2 class="title mb-[30px]">Collection</h2>
+      <div id="collectionGrid" class="grid gap-[18px] nav:grid-cols-[1.2fr_1fr_1fr]" aria-live="polite" aria-busy="true"></div>
+    </section>
+
+    <section class="mx-auto max-w-[1480px] px-4 pt-[60px] nav:px-7 nav:pt-[84px]" id="campaign">
+      <div class="mb-[30px] flex flex-wrap items-end justify-between gap-5"><h2 class="title">Latest news</h2><a class="tlink" href="#campaign">Semua artikel</a></div>
+      <div class="grid gap-[22px] xs:grid-cols-2 wide:grid-cols-4">
+        <article class="group"><div class="mb-3.5 aspect-4/3 overflow-hidden bg-linear-to-br from-[#2b2b2b] to-[#6b6b66]"><img class="size-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=70" alt="Interior toko Ache Corp" loading="lazy"></div><h3 class="mb-2 text-[19px] leading-tight font-bold"><a class="hover:text-accent" href="#campaign">Buka toko baru di Malang</a></h3><p class="text-[15px] text-muted">Ruang kecil dengan rak panjang, speaker besar, dan kopi gratis tiap akhir pekan.</p></article>
+        <article class="group"><div class="mb-3.5 aspect-4/3 overflow-hidden bg-linear-to-br from-[#2b2b2b] to-[#6b6b66]"><img class="size-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=800&q=70" alt="Pakaian tergantung di rak" loading="lazy"></div><h3 class="mb-2 text-[19px] leading-tight font-bold"><a class="hover:text-accent" href="#campaign">Dead Static: dari sketsa ke rak</a></h3><p class="text-[15px] text-muted">Cerita di balik pemilihan bahan, pola, dan warna untuk koleksi musim ini.</p></article>
+        <article class="group"><div class="mb-3.5 aspect-4/3 overflow-hidden bg-linear-to-br from-[#2b2b2b] to-[#6b6b66]"><img class="size-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=70" alt="Hoodie Ache Corp" loading="lazy"></div><h3 class="mb-2 text-[19px] leading-tight font-bold"><a class="hover:text-accent" href="#campaign">Wawancara: Rani, ilustrator Night Shift</a></h3><p class="text-[15px] text-muted">Kenapa gambar tangan masih penting di tengah dunia serba digital.</p></article>
+        <article class="group"><div class="mb-3.5 aspect-4/3 overflow-hidden bg-linear-to-br from-[#2b2b2b] to-[#6b6b66]"><img class="size-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=70" alt="Kaos Ache Corp" loading="lazy"></div><h3 class="mb-2 text-[19px] leading-tight font-bold"><a class="hover:text-accent" href="#campaign">Panduan ukuran: oversize tanpa tenggelam</a></h3><p class="text-[15px] text-muted">Cara memilih ukuran yang pas supaya potongan boxy tetap rapi di badan.</p></article>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-[1480px] px-4 pt-[60px] nav:px-7 nav:pt-[84px]" id="stores">
+      <h2 class="title mb-[30px]">Store locations</h2>
+      <div class="grid gap-[22px] nav:grid-cols-3">
+        <article class="flex flex-col border border-line bg-paper"><img class="aspect-video w-full object-cover" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=70" alt="Toko Malang" loading="lazy"><div class="grid content-start gap-2 p-[22px]"><h3 class="font-display text-[34px] leading-none font-normal uppercase">Malang</h3><p>Jl. Bukit Cemara Tujuh No.11</p><p class="font-semibold">Senin–Minggu, 10.00–21.00</p><a class="tlink mt-1.5 justify-self-start" href="https://maps.app.goo.gl/j9JB91znJzMS6knb6" target="_blank" rel="noopener">Petunjuk arah</a></div></article>
+        <article class="flex flex-col border border-line bg-paper"><img class="aspect-video w-full object-cover" src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=800&q=70" alt="Toko Bandung" loading="lazy"><div class="grid content-start gap-2 p-[22px]"><h3 class="font-display text-[34px] leading-none font-normal uppercase">Bandung</h3><p>Jl. Trunojoyo No. 6, Citarum, Bandung Wetan, Jawa Barat</p><p class="font-semibold">Senin–Minggu, 10.00–21.00</p><a class="tlink mt-1.5 justify-self-start" href="https://maps.google.com/?q=Bandung" target="_blank" rel="noopener">Petunjuk arah</a></div></article>
+        <article class="flex flex-col border border-line bg-paper"><img class="aspect-video w-full object-cover" src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=70" alt="Toko Jakarta" loading="lazy"><div class="grid content-start gap-2 p-[22px]"><h3 class="font-display text-[34px] leading-none font-normal uppercase">Jakarta</h3><p>Jl. Kemang Raya No. 21, Mampang Prapatan, Jakarta Selatan</p><p class="font-semibold">Senin–Minggu, 10.00–21.00</p><a class="tlink mt-1.5 justify-self-start" href="https://maps.google.com/?q=Jakarta" target="_blank" rel="noopener">Petunjuk arah</a></div></article>
+      </div>
+    </section>
+
+    <section class="mt-[90px] bg-black px-7 py-20 text-white" id="newsletter"><div class="mx-auto max-w-[720px] text-center">
+      <h2 class="mb-3.5 font-display text-[clamp(38px,6vw,72px)] leading-none font-normal uppercase">Jangan ketinggalan drop berikutnya</h2>
+      <p class="text-[#c9c9c4]">Daftar untuk dapat info rilis, promo khusus member, dan giveaway.</p>
+      <form id="newsletterForm" class="mt-7 flex flex-wrap justify-center gap-2.5" novalidate><label for="email" class="sr-only">Alamat email</label>
+        <input type="email" id="email" name="email" class="flex-[1_1_280px] border-2 border-white bg-transparent px-[18px] py-3.5 text-white placeholder:text-[#9a9a95] [&.invalid]:border-accent" placeholder="nama@email.com" autocomplete="email" required>
+        <button type="submit" class="btn btn-light">Daftar</button><p id="formMsg" class="min-h-6 basis-full font-semibold data-[s=ok]:text-[#7dffa1] data-[s=err]:text-[#ff8a75]" role="status"></p></form>
+    </div></section>
+  </main>
+
+  <footer class="overflow-hidden bg-bg px-4 pt-[60px] pb-6 nav:px-7">
+    <div class="mx-auto grid max-w-[1480px] grid-cols-2 gap-[30px] nav:grid-cols-3 [&_a]:hover:text-accent [&_h3]:mb-3.5 [&_h3]:text-[15px] [&_h3]:font-bold [&_li+li]:mt-2">
+      <div><h3>Ache Corp</h3><ul><li><a href="#top">Beranda</a></li><li><a href="shop.html">Shop</a></li><li><a href="#campaign">Tentang kami</a></li></ul></div>
+      <div><h3>Toko</h3><ul><li><a href="#stores">Malang</a></li><li><a href="#stores">Bandung</a></li><li><a href="#stores">Jakarta</a></li></ul></div>
+      <div><h3>Ikuti kami</h3><ul><li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li></ul></div>
+    </div>
+    <p class="mt-[50px] mb-2.5 text-center font-display text-[clamp(80px,21vw,340px)] leading-[.9] whitespace-nowrap" aria-hidden="true">ACHE CORP</p>
+    <p class="text-center text-[13px] text-muted">&copy; <span id="year">2026</span> Ache Corp. Dibuat untuk tugas Pemrograman Web, Universitas Muhammadiyah Malang.</p>
+  </footer>
+  <div id="search" class="fixed inset-0 z-120 flex items-start justify-center bg-black/55 px-5 pt-[12vh]" hidden><div class="w-[min(640px,100%)] animate-fade bg-paper px-[18px] pt-3.5 pb-[18px]" role="dialog" aria-modal="true" aria-label="Cari produk">
+    <div class="flex items-center gap-2 border-b-2 border-black"><input type="search" id="searchInput" class="flex-1 bg-transparent py-3 text-[22px] outline-none" placeholder="Cari kemeja, sepatu, kacamata…" autocomplete="off"><button class="icon-btn" id="searchClose" aria-label="Tutup pencarian">&#10005;</button></div>
+    <ul class="mt-2.5 max-h-[50vh] overflow-auto" id="searchResults"></ul></div></div>
+  <div class="fixed inset-0 z-90 bg-black/50" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Keranjang belanja" aria-hidden="true">
+    <div class="d-head"><h2 class="d-title">Keranjang</h2><button class="icon-btn" id="cartClose" aria-label="Tutup keranjang">&#10005;</button></div>
+    <ul class="flex-1 overflow-auto px-[22px] py-2" id="cartItems"></ul>
+    <div class="grid gap-2.5 border-t border-line px-[22px] pt-[18px] pb-[22px]"><div class="flex justify-between text-lg"><span>Subtotal</span><strong id="cartTotal">Rp 0</strong></div><p class="text-[13px] text-muted">Gratis ongkir untuk semua pesanan.</p><button class="btn w-full text-center" id="checkoutBtn">Checkout</button></div>
+  </aside>
+  <div id="toast" class="pointer-events-none fixed bottom-[26px] left-1/2 z-150 max-w-[calc(100%-32px)] -translate-x-1/2 translate-y-[30px] bg-black px-[22px] py-3 text-sm font-semibold text-white opacity-0 transition duration-300 ease-ache on:translate-y-0 on:opacity-100" role="status" aria-live="polite"></div>
+
+  <script src="api.js" defer></script>
+  <script src="common.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
